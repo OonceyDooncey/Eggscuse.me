@@ -1,35 +1,80 @@
 <template>
- <div class="flex flex-col items-center mt-5">
-  <div class="option-btn">
-   <span class="option">{{ category }}</span>
-  </div>
-  <div class="mt-14">
-   <p class="text-2xl font-poppins">This is the title of the excuse</p>
-  </div>
-  <div class="grid grid-cols-2 mt-10 gap-5">
-   <button class="p-2 bg-gray-950 rounded-lg">
-    <img src="~/assets/restart.svg" alt="regenerate" class="w-9 h-9">
-   </button>
-   <NuxtLink to="/" class="p-2 bg-gray-950 rounded-lg">
-    <img src="~/assets/home.svg" alt="back to homepage" class="w-9 h-9">
-   </NuxtLink>
-  </div>
- </div>
+    <div class="flex flex-col items-center mt-5">
+        <div class="option-btn">
+            <span class="option">{{ category }}</span>
+        </div>
+        <div class="mt-14">
+            <p class="text-2xl font-poppins">{{ excuse }}</p>
+        </div>
+        <div class="grid grid-cols-2 mt-10 gap-5">
+            <button
+                class="p-2 bg-gray-950 rounded-lg"
+                @click="fetchExcuse(category)"
+            >
+                <img
+                    src="~/assets/restart.svg"
+                    alt="regenerate"
+                    class="w-9 h-9"
+                />
+            </button>
+            <NuxtLink to="/" class="p-2 bg-gray-950 rounded-lg">
+                <img
+                    src="~/assets/home.svg"
+                    alt="back to homepage"
+                    class="w-9 h-9"
+                />
+            </NuxtLink>
+        </div>
+    </div>
 </template>
 
 <script setup lang="ts">
-const { category } = useRoute().params
+const { category } = useRoute().params;
+const excuse = ref("");
 
-if (category === "work") {
- //fetch data for work
+interface ExcuseObject {
+    status: number;
+    data: string;
+    message: string;
 }
+const fetchExcuse = async (selectedCategory: string | string[]) => {
+    //fetch data for the excuse
 
-if (category === "school") {
- //fetch data for school
-}
+    const { data, status } = await useFetch("/api/excuse", {
+        query: { category: selectedCategory },
+    });
 
-if (category === "social") {
- //fetch data for social
-}
+    if (data.value === null) {
+        console.log("No data");
+        doShowError("No data");
+        return;
+    }
 
+    if (status.value !== "success") {
+        console.log("Error fetching data");
+        doShowError("Error fetching data");
+        return;
+    }
+
+    const response: ExcuseObject = data.value;
+
+    if (response.status !== 200) {
+        console.log(response.message);
+        doShowError("Error fetching data");
+        return;
+    }
+
+    excuse.value = response.data;
+
+    // console.log(response);
+    // return response;
+};
+fetchExcuse(category);
+
+const doShowError = (message: string) => {
+    showError({
+        statusCode: 404,
+        statusMessage: message,
+    });
+};
 </script>
