@@ -3,7 +3,7 @@
     <header class="flex justify-center h-1/6 md:justify-between">
       <NuxtLink to="/" class="flex items-center md:ml-8">
         <img
-          src="~/assets/logo.svg"
+          src="~/assets/logo.png"
           alt="Eggscuse.me logo"
           class="w-16 h-20 md:w-20"
         />
@@ -19,6 +19,9 @@
     </header>
 
     <div class="h-4/6">
+      <h2 class="font-poppins font-semibold text-4xl h-1/6 mt-5 text-center md:text-6xl lg:text-7xl">
+        What’s Your <span class="font-title font-margarine">Eggscuse?</span>
+      </h2>
       <slot />
     </div>
 
@@ -30,9 +33,7 @@
       />
       <div class="flex flex-col items-center md:flex-row">
         <span class="font-poppins text-base">Scrambling to give us feedback?</span>
-        <button class="rounded-2xl bg-gray-950 mt-2 md:ml-2 md:mt-0 px-4 py-1 font-poppins text-gray-50 text-base">
-          Feedback
-        </button>
+        <a href="https://forms.gle/f2uMzcGtANYTcj8A9" class="rounded-2xl bg-gray-950 mt-2 md:ml-2 md:mt-0 px-4 py-1 font-poppins text-gray-50 text-base" target="_blank">Feedback</a>
       </div>
     </footer>
   </div>

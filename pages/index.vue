@@ -1,10 +1,5 @@
 <template>
   <div class="h-full flex flex-col items-center">
-    <h2
-      class="font-poppins font-semibold text-4xl h-1/6 mt-5 text-center md:text-6xl lg:text-7xl"
-    >
-      What’s Your <span class="font-title font-margarine">Eggscuse?</span>
-    </h2>
     <p
       class="font-poppins text-md md:h-1/6 text-center mt-2 md:text-xl lg:text-2xl"
     >
