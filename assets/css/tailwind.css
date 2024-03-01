@@ -9,5 +9,5 @@
 }
 
 .option {
-  @apply flex h-full justify-center items-center text-3xl;
+  @apply flex h-full justify-center items-center text-3xl font-margarine;
 }
