@@ -4,25 +4,24 @@
             <span class="option">{{ category }}</span>
         </div>
         <div class="mt-14">
-            <p class="text-2xl font-poppins">{{ excuse }}</p>
+            <p class="text-xl text-center md:text-2xl font-poppins">
+                {{ excuse }}
+            </p>
         </div>
         <div class="grid grid-cols-2 mt-10 gap-5">
             <button
                 class="p-2 bg-gray-950 rounded-lg"
-                @click="fetchExcuse(category)"
-            >
+                @click="fetchExcuse(category)">
                 <img
                     src="~/assets/restart.svg"
                     alt="regenerate"
-                    class="w-9 h-9"
-                />
+                    class="w-9 h-9" />
             </button>
             <NuxtLink to="/" class="p-2 bg-gray-950 rounded-lg">
                 <img
                     src="~/assets/home.svg"
                     alt="back to homepage"
-                    class="w-9 h-9"
-                />
+                    class="w-9 h-9" />
             </NuxtLink>
         </div>
     </div>
