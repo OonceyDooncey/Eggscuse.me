@@ -5,9 +5,13 @@
 @tailwind utilities;
 
 .option-btn {
-  @apply cursor-pointer border border-gray-950 rounded-lg p-7 md:p-14;
+    @apply cursor-pointer border border-gray-500 rounded-lg w-24 h-24 md:w-40 md:h-40 relative;
 }
 
 .option {
-  @apply flex h-full justify-center items-center text-3xl font-margarine;
+    @apply text-xl md:text-3xl font-margarine text-gray-950 absolute bottom-0 left-1/4;
+}
+
+.option-img {
+    @apply w-full h-full opacity-70;
 }
