@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .option-btn {
-    @apply cursor-pointer border border-gray-500 rounded-lg w-24 h-24 md:w-40 md:h-40 relative;
+    @apply cursor-pointer border border-gray-500 md:border-gray-300 rounded-lg w-24 h-24 md:w-40 md:h-40 relative;
 }
 
 .option {
