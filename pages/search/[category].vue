@@ -1,6 +1,7 @@
 <template>
     <div class="flex flex-col items-center mt-5">
         <div class="option-btn">
+            <img :src="url" alt="egg thumbnail" class="option-img" />
             <span class="option">{{ category }}</span>
         </div>
         <div class="mt-14">
@@ -76,4 +77,18 @@ const doShowError = (message: string) => {
         statusMessage: message,
     });
 };
+
+let url = ref("");
+
+if (category === "work") {
+    url.value = "/_nuxt/assets/work_egg.png";
+}
+
+if (category === "school") {
+    url.value = "/_nuxt/assets/school_egg.png";
+}
+
+if (category === "social") {
+    url.value = "/_nuxt/assets/social_egg.png";
+}
 </script>
