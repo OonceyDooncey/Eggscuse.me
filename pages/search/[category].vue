@@ -12,20 +12,17 @@
         <div class="grid grid-cols-2 mt-10 gap-5">
             <button
                 class="p-2 bg-gray-950 rounded-lg"
-                @click="fetchExcuse(category)"
-            >
+                @click="fetchExcuse(category)">
                 <img
                     src="~/assets/restart.svg"
                     alt="regenerate"
-                    class="w-9 h-9"
-                />
+                    class="w-9 h-9" />
             </button>
             <NuxtLink to="/" class="p-2 bg-gray-950 rounded-lg">
                 <img
                     src="~/assets/home.svg"
                     alt="back to homepage"
-                    class="w-9 h-9"
-                />
+                    class="w-9 h-9" />
             </NuxtLink>
         </div>
     </div>
@@ -72,7 +69,10 @@ const doShowError = (message: string) => {
 
 type FuncType = (...args: any[]) => any;
 
-function debounce<T extends FuncType>(func: T, delay: number): (...args: Parameters<T>) => void {
+function debounce<T extends FuncType>(
+    func: T,
+    delay: number
+): (...args: Parameters<T>) => void {
     let timeoutId: ReturnType<typeof setTimeout>;
     let immediate = true;
 
@@ -92,14 +92,14 @@ function debounce<T extends FuncType>(func: T, delay: number): (...args: Paramet
 let url = ref("");
 
 if (category === "work") {
-    url.value = "/_nuxt/assets/work_egg.png";
+    url.value = "/work_egg.png";
 }
 
 if (category === "school") {
-    url.value = "/_nuxt/assets/school_egg.png";
+    url.value = "/school_egg.png";
 }
 
 if (category === "social") {
-    url.value = "/_nuxt/assets/social_egg.png";
+    url.value = "/social_egg.png";
 }
 </script>
