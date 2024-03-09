@@ -1,7 +1,12 @@
 <template>
     <div class="flex flex-col items-center mt-5">
         <div class="option-btn">
-            <img :src="url" alt="egg thumbnail" class="option-img" />
+            <NuxtImg
+                format="webp"
+                :src="url"
+                sizes="sm:50px md:150px lg:200px"
+                alt="egg thumbnail"
+                class="option-img" />
             <span class="option">{{ category }}</span>
         </div>
         <div class="mt-14">
@@ -13,14 +18,18 @@
             <button
                 class="p-2 bg-gray-950 rounded-lg"
                 @click="fetchExcuse(category)">
-                <img
-                    src="~/assets/restart.svg"
+                <NuxtImg
+                    format="webp"
+                    src="/icon/restart.svg"
+                    sizes="sm:30px md:60px lg:90px"
                     alt="regenerate"
                     class="w-9 h-9" />
             </button>
             <NuxtLink to="/" class="p-2 bg-gray-950 rounded-lg">
-                <img
-                    src="~/assets/home.svg"
+                <NuxtImg
+                    format="webp"
+                    src="/icon/home.svg"
+                    sizes="sm:30px md:60px lg:90px"
                     alt="back to homepage"
                     class="w-9 h-9" />
             </NuxtLink>

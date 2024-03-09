@@ -8,8 +8,10 @@
             <NuxtLink
                 to="/search/work"
                 class="option-btn md:hover:border-gray-950 transition">
-                <img
-                    src="~/assets/work_egg.png"
+                <NuxtImg
+                    format="webp"
+                    src="/work_egg.png"
+                    sizes="sm:50px md:150px lg:200px"
                     alt="egg thumbnail"
                     class="option-img" />
                 <span class="option">Work</span>
@@ -17,8 +19,10 @@
             <NuxtLink
                 to="/search/school"
                 class="option-btn md:hover:border-gray-950 transition">
-                <img
-                    src="~/assets/school_egg.png"
+                <NuxtImg
+                    format="webp"
+                    src="/school_egg.png"
+                    sizes="sm:50px md:150px lg:200px"
                     alt="egg thumbnail"
                     class="option-img" />
                 <span class="option">School</span>
@@ -26,8 +30,10 @@
             <NuxtLink
                 to="/search/social"
                 class="option-btn md:hover:border-gray-950 transition">
-                <img
-                    src="~/assets/social_egg.png"
+                <NuxtImg
+                    format="webp"
+                    src="/social_egg.png"
+                    sizes="sm:50px md:150px lg:200px"
                     alt="egg thumbnail"
                     class="option-img" />
                 <span class="option">Social</span>
