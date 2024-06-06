@@ -1,3 +1,15 @@
+# Eggscuse Me
+
+### A dynamic randomizer designed to provide excuses
+
+![Built with](https://skillicons.dev/icons?i=nuxt,tailwind,supabase)
+
+[Eggscuse.me](https://eggscuse.me/)
+
+## What is Eggscuse Me?
+
+Eggscuse Me is a playful web app designed to help users generate a wide variety of excuses for any occasion. Whether you're looking to dodge an unwanted event, explain a missed deadline, or simply entertain friends with imaginative alibis, Eggscuse Me offers a fun and user-friendly interface to quickly produce humorous and clever excuses.
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
